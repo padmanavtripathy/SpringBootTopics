@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/jwttoken
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+   hibernate:
+      ddl-auto: update
+   show-sql: true
+   properties:
+      hibernate:
+      format_sql_: true
+   database: mysql
+   database-platform: org.hibernate.dialect.MySQL8Dialect
+ 
+server:
+  port: 8081
+  
+application:
+  security:
+    jwt:
+      secret-key: 5bcb0d3bc90aafff4092dbd50d7f43f3c3911aee4d2e071c5f059856620bb735
+      access-token-expiration: 86400000
+      refresh-token-expiration: 604800000
+   
